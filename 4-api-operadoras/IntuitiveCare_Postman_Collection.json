@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "Intuitive Care - Teste de Nivelamento",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "12345678-1234-1234-1234-1234567890ab"
+  },
+  "item": [
+    {
+      "name": "Busca de Operadoras",
+      "item": [
+        {
+          "name": "Buscar - Sem Par\u00e2metro",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.5:5000/search",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "0",
+                "5"
+              ],
+              "port": "5000",
+              "path": [
+                "search"
+              ]
+            },
+            "description": "Retorna os primeiros 10 registros da base de operadoras."
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar - Com Par\u00e2metro ?query=bradesco",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://192.168.0.5:5000/search?query=bradesco",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "0",
+                "5"
+              ],
+              "port": "5000",
+              "path": [
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "bradesco"
+                }
+              ]
+            },
+            "description": "Busca operadoras filtrando pela raz\u00e3o social ou nome fantasia com o termo 'bradesco'."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Assunto: Entrega – Teste de Nivelamento | Intuitive Care
+
+Olá, time Intuitive Care! 👋
+
+Me chamo Ludmilla Oliveira, e é com muito entusiasmo que envio minha entrega completa do Teste de Nivelamento.
+
+Durante o desenvolvimento, me dediquei não apenas a atender os requisitos de cada etapa, mas também a ir além, adicionando testes analíticos extras, organização estruturada em múltiplos níveis (API, Web Scraping, Banco de Dados, Transformação de Dados), e uma abordagem limpa, automatizada e bem documentada para facilitar a análise.
+
+Todos os testes estão separados por pastas e acompanhados de um `README.md` explicativo com passo a passo de execução e tecnologias utilizadas.
+
+Além disso, optei por seguir boas práticas em estruturação de código, tratamento de dados, uso de ferramentas modernas e clareza nos scripts SQL e Python.
+
+Estou extremamente alinhada com o propósito da Intuitive Care de transformar dados em saúde de forma inteligente e humanizada — e ficaria muito feliz em fazer parte desse time incrível.
+
+📎 Em anexo: `.zip` com todos os testes + organização por pastas  
+🌐 Repositório GitHub (caso prefiram): [colocar link depois que subir]
+
+Fico à disposição para qualquer dúvida e torcendo para que essa seja apenas a primeira entrega de muitas com vocês.
+
+Atenciosamente,  
+**Ludmilla Oliveira**  
+📧 [seu e-mail] | 📱 [seu telefone] | 💻 [LinkedIn ou GitHub se quiser]
+
