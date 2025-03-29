@@ -1,54 +1,52 @@
-# teste 3 - banco de dados
+# teste 3 – banco de dados
 
-## descrição
-
-este teste estrutura um banco de dados relacional com os dados da ANS, trata encoding e integridade referencial, e gera insights via SQL.
+este desafio propõe a criação de um banco de dados relacional com dados públicos da ANS, estruturação de tabelas, importação de dados tratados e realização de queries analíticas.
 
 ---
 
-## tecnologias utilizadas
+## tecnologias
 
 - PostgreSQL 10+
-- comandos SQL e `psql` para importação de arquivos
+- SQL (DDL, DML e queries analíticas)
+- `psql` (para importação via terminal)
 
 ---
 
-## dados utilizados
+## estrutura dos dados
 
-- `operadoras.csv`: dados cadastrais de operadoras ativas (ANS)
-- `despesas.csv`: dados de demonstrações contábeis dos últimos 2 anos
+- `operadoras.csv`: dados cadastrais das operadoras ativas na ANS
+- `despesas.csv`: despesas extraídas dos demonstrativos contábeis dos últimos 2 anos
 
-fontes:
-- https://dadosabertos.ans.gov.br/FTP/PDA/operadoras_de_plano_de_saude_ativas/
-- https://dadosabertos.ans.gov.br/FTP/PDA/demonstracoes_contabeis/
-
----
-
-## q que o script faz
-
-1. cria as tabelas `operadoras`, `despesas` e `temp_despesas`
-2. importa os dados CSV via terminal (`\copy`)
-3. insere operadoras faltantes com dados fictícios (placeholders)
-4. realiza tratamento de dados (formato de data, vírgula em valores)
-5. executa queries analíticas:
-   - top 10 operadoras com maiores despesas no último ano
-   - top 10 operadoras com maiores despesas no 4º trimestre de 2024
+CSVs tratados e prontos para importação:
+[🔗 Acesse os arquivos no Google Drive](https://drive.google.com/drive/folders/1WTADurGc-c1sSBDBU6rcQeFEgwHrJbnS?usp=sharing)
 
 ---
 
-## como executar
+## o que o script SQL realiza
 
-### 1. acesse o PostgreSQL
+- criação das tabelas: `operadoras`, `despesas`, `temp_despesas`
+- importação dos dados tratados via `\copy`
+- inserção de operadoras faltantes (placeholders)
+- conversão de formatos de data e valores numéricos
+- duas queries analíticas:
+  - Top 10 operadoras com maiores despesas no **último ano**
+  - Top 10 operadoras com maiores despesas no **4º trimestre de 2024**
+
+---
+
+## ▶️ execução (psql)
+
+1. acesse o banco:
 ```bash
 psql -U postgres -d teste_nivelamento
 ```
 
-### 2. execute o script SQL:
+2. execute o script SQL:
 ```sql
 \i caminho/para/script.sql
 ```
 
-### 3. importe os dados com os comandos:
+3. importe os dados:
 ```sql
 \copy operadoras FROM 'CAMINHO/operadoras.csv' DELIMITER ';' CSV HEADER ENCODING 'UTF8';
 \copy temp_despesas FROM 'CAMINHO/despesas.csv' DELIMITER ';' CSV HEADER ENCODING 'UTF8';
@@ -56,23 +54,15 @@ psql -U postgres -d teste_nivelamento
 
 ---
 
-## resultados esperados
+## resultado esperado
 
-- tabelas criadas corretamente
-- dados tratados e normalizados
-- duas queries analíticas funcionando com retorno válido
+- banco de dados funcional com integridade referencial
+- tabelas populadas corretamente
+- queries analíticas com retorno válido
 
 ---
 
-## DADOS TRATADOS (CSV)
+**desenvolvido por Ludmilla Oliveira ✨**
 
-para manter o repositório leve e respeitar o limite de arquivos do GitHub, os arquivos `.csv` tratados estão disponíveis no Google Drive:
-
-acesse a pasta com os arquivos:
-[Google Drive – CSVs tratados](https://drive.google.com/drive/folders/1WTADurGc-c1sSBDBU6rcQeFEgwHrJbnS?usp=sharing)
-
-os arquivos estão no formato `.csv` com delimitador `;` e encoding `UTF-8`, prontos para uso com os comandos `\copy` descritos acima.
-
-
-## SISTEMA AUTOMOCAO PYTHON
+## sistema automoção Python
 #foi criado somente para juntar os arquivos divergentes dos últimos 2 anos do repositório em um único CSV
