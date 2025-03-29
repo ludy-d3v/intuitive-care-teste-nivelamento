@@ -64,12 +64,15 @@ psql -U postgres -d teste_nivelamento
 
 ---
 
-## entrega
+## DADOS TRATADOS (CSV)
 
-inclui:
-- `script.sql`
-- `README.md`
-- instruções para download ou uso dos arquivos CSV
+para manter o repositório leve e respeitar o limite de arquivos do GitHub, os arquivos `.csv` tratados estão disponíveis no Google Drive:
+
+acesse a pasta com os arquivos:
+[Google Drive – CSVs tratados](https://drive.google.com/drive/folders/1WTADurGc-c1sSBDBU6rcQeFEgwHrJbnS?usp=sharing)
+
+os arquivos estão no formato `.csv` com delimitador `;` e encoding `UTF-8`, prontos para uso com os comandos `\copy` descritos acima.
+
 
 ## SISTEMA AUTOMOCAO PYTHON
 #foi criado somente para juntar os arquivos divergentes dos últimos 2 anos do repositório em um único CSV
